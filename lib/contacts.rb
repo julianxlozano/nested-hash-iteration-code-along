@@ -15,5 +15,22 @@ require 'pry'
   # }
   
 def remove_strawberry(contacts)
+  contacts.map do |person,data|
+    data.map do|attribute,value|
+      if attribute == :favorite_ice_cream_flavors
+        value.map do|flavor|
+          
+          if flavor=="strawberry"
+            value.delete("strawberry")
+            
+          end
+        end
+      end
+    end
+  end
+
+
+  contacts 
+  
 
 end
